@@ -1,0 +1,48 @@
+               <!DOCTYPE html>
+                <html lang="hi">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>साधारण वेब ऐप</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 40px; }
+                        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+                        label, input, button { display: block; width: 100%; margin-bottom: 10px; }
+                        #output { margin-top: 20px; font-weight: bold; }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h2>अपना नाम दर्ज करें</h2>
+                        <form id="nameForm">
+                            <label for="name">नाम:</label>
+                            <input type="text" id="name" name="name" required>
+                            <button type="submit">सबमिट करें</button>
+                        </form>
+                        <div id="output"></div>
+                        <button id="shareBtn" style="display:none">शेयर करें</button>
+                    </div>
+                    <script>
+                        document.getElementById('nameForm').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            var name = document.getElementById('name').value;
+                            document.getElementById('output').textContent = 'नमस्ते, ' + name + '!';
+                            document.getElementById('shareBtn').style.display = 'block';
+                        });
+
+                        document.getElementById('shareBtn').addEventListener('click',function() {
+                            var name = document.getElementById('name').value;
+                            var text = 'kgshankar,  ' +name + '!';
+                            if (navigator.share) {
+                                navigator.share({
+                                    title:'kgshankar',
+                                    text: text,
+                                    url: window.location.href
+
+                                });
+                            } else {
+                                alert('share API is your browser is not supported');
+                            }
+                        });
+                    </script>
+                </body>
+                </html>
