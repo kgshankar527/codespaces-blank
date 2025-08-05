@@ -1,0 +1,46 @@
+body {
+      font-family: Poppins, sans-serif;
+        margin: 40px;
+          background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+          }
+
+          .container {
+            max-width: 400px;
+              margin: auto;
+                padding: 20px;
+                  border: 1px solid #ccc;
+                    border-radius: 8px;
+                      background: #ffffffcc;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        }
+
+                        label, input, button {
+                          display: block;
+                            width: 100%;
+                              margin-bottom: 10px;
+                                font-size: 1rem;
+                                }
+
+                                input[type="radio"] {
+                                  width: auto;
+                                    margin-right: 6px;
+                                    }
+
+                                    button {
+                                      padding: 10px;
+                                        background-color: #00796b;
+                                          color: white;
+                                            border: none;
+                                              border-radius: 6px;
+                                                cursor: pointer;
+                                                }
+
+                                                button:hover {
+                                                  background-color: #004d40;
+                                                  }
+
+                                                  #output {
+                                                    margin-top: 20px;
+                                                      font-weight: bold;
+                                                        color: #333;
+                                                  }
